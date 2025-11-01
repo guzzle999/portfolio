@@ -9,11 +9,12 @@ import Contact from "../components/Contact.jsx"
 import { Footer } from '../components/Footer.jsx'
 const Home = () => {
   return (
-    <div
-      className="min-h-screen w-full
-              bg-gradient-to-b from-[#000004] via-[#242145] to-[#0f0f10] 
-              bg-repeat bg-contain bg-center"
-    >
+    // <div
+    //   className="min-h-screen w-full
+    //           bg-gradient-to-b from-[#000004] via-[#242145] to-[#0f0f10]
+    //           bg-repeat bg-contain bg-center"
+    // >
+    <div className="min-h-screen w-full bg-[url('bg02.jpg')] bg-repeat bg-contain bg-center">
       <Homepage />
       <AboutMe />
       <Skills />

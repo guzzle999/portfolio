@@ -1,20 +1,21 @@
 import React from 'react'
 import { SparklesText } from "@/components/ui/sparkles-text";
+import { AuroraText } from './ui/aurora-text';
 
 const Aboutme = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12">
-      <SparklesText
+    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 ">
+      <h1
         id="aboutme"
-        className=" pt-30 pb-12 flex items-center justify-center font-bold text-5xl text-gray-300 "
+        className=" pt-30 pb-12 flex items-center justify-center font-bold text-5xl text-gray-300"
       >
-        About Me
-      </SparklesText>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full items-center">
-        <div className="text-white space-y-4 max-w-md mx-auto">
+        About<AuroraText className="ml-2">Me</AuroraText>
+      </h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl w-full items-center mx-auto px-6">
+        <div className="text-white space-y-4 md:pr-6 text-center md:text-left">
           <p className="text-zinc-300 text-lg leading-relaxed">
             Aspiring Full Stack Developer with a strong interest in AI and
-            modern web technologies.{" "}
+            modern web technologies.
           </p>
           <p className="text-zinc-300 text-lg leading-relaxed">
             Experienced in building scalable, user-centric applications through
@@ -26,12 +27,12 @@ const Aboutme = () => {
             to bridge technical solutions with real user needs.
           </p>
         </div>
-        <div className="flex justify-center">
+        <div className="flex justify-center md:justify-end">
           <img
             src="mypicture.jpg"
             alt="Profile"
-            className=" w-full max-w-[300px] aspect-[3/4]
-              object-cover rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
+            className="w-full max-w-[330px] aspect-[3/4] object-cover rounded-2xl md:mt-4 transition duration-500 hover:scale-105
+    hover:shadow-[0_0_45px_rgba(0,160,255,0.5)]"
           ></img>
         </div>
       </div>

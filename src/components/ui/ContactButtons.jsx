@@ -6,35 +6,7 @@ import { AnimatedShinyText } from "@/components/ui/animated-shiny-text";
 const EMAIL_ADDRESS = "amonrat9298@gmail.com";
 
 
-// const LiquidButton = ({ children, className = "", ...props }) => {
-//   return (
-//     <button
-//       className={`
-//         relative overflow-hidden group 
-//         px-6 py-3 rounded-full 
-//         font-medium text-white 
-//         bg-purple-300/20 backdrop-blur-sm 
-//         border border-purple-400/50 
-//         shadow-lg transition duration-300 ease-in-out
-//         ${className}
-//       `}
-//       {...props}
-//     >
-//       <span className="relative z-10 flex items-center gap-1">{children}</span>
-//       {/* เอฟเฟกต์ "Liquid" (แสงวิ่งจากซ้ายไปขวา) */}
-//       <span
-//         className="absolute inset-0 bg-white opacity-10 
-//                    transform -skew-x-12 translate-x-[-150%] 
-//                    group-hover:translate-x-[150%] transition-transform 
-//                    duration-700 ease-out z-0"
-//         aria-hidden="true"
-//       ></span>
-//     </button>
-//   );
-// };
-
-// คอมโพเนนต์หลักที่รวมปุ่มและ Toast
-export default function ContactButtons() {
+export default function ContactButtons({onEmailCopy}) {
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = () => {
@@ -56,6 +28,9 @@ export default function ContactButtons() {
           },
         });
 
+        if (onEmailCopy)  {
+          onEmailCopy();
+        }
         // รีเซ็ตสถานะ copied หลังจาก 2 วินาที
         setTimeout(() => setCopied(false), 2000);
       })
@@ -68,17 +43,20 @@ export default function ContactButtons() {
   return (
     <div className="flex items-center space-x-2">
       {/* ปุ่ม Liquid Glass: Let's Connect */}
-      <div className="group relative">
+      <div
+        className="group relative flex items-center justify-center
+                    rounded-xl backdrop-blur-lg
+                   shadow-slate-500/40 hover:scale-[1.02] transition
+                   cursor-context-menu"
+      >
         <AnimatedShinyText
           shimmerWidth={300}
-          className="text-xl font-bold py-2
-      bg-slate-800/50  backdrop-blur-sm
-      shadow-slate-500/40 hover:scale-[1.02] transition
-      group-hover:animate-shiny-text"
+          className="text-xl font-bold py-2 px-4
+                     animate-shiny-text"
         >
-          <span className="flex items-center gap-2 cursor-context-menu">
+          <span className="flex items-center gap-2 ml-2">
             Let's Connect
-            <ArrowRight className="w-5 h-5 text-slate-200" />
+            <ArrowRight className="w-5 h-5 text-[#E2E8F0]" />
           </span>
         </AnimatedShinyText>
       </div>
@@ -87,18 +65,22 @@ export default function ContactButtons() {
       <button
         onClick={handleCopyEmail}
         className={`
-    p-3 transition duration-50 ease-in-out cursor-pointer
-    ${copied ? "text-zinc-500" : "text-zinc-400 hover:text-white"}
-    backdrop-blur-sm shadow-md
+    p-3 transition duration-50 ease-in-out cursor-pointer rounded-full outline-none
+    ${
+      copied
+        ? "text-zinc-400"
+        : "text-slate-400 hover:text-zinc-400 hover:shadow-[0_0_30px_rgba(0,255,255,0.2)] border-white/10 border backdrop-blur-lg"
+    }
+    backdrop-blur-sm
   `}
         title="Copy Email Address"
       >
         {copied ? (
           <div className="flex gap-1">
-            <CopyCheck className="w-5 h-5" />
+            <CopyCheck className="w-7 h-7" />
           </div>
         ) : (
-          <Copy className="w-5 h-5" />
+          <Copy className="w-6 h-6" />
         )}
       </button>
 

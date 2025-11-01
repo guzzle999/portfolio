@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 import { X } from "lucide-react"
 import { InteractiveHoverButton } from "@/components/ui/interactive-hover-button";
+import { AuroraText } from './ui/aurora-text';
 
 const Certificates = () => {
   const [activeImage, setActiveImage] = useState(null);
@@ -14,12 +15,15 @@ const Certificates = () => {
 
   return (
     <>
-      <div className="pt-5 pb-6 flex items-center justify-center font-bold text-5xl text-gray-300">
-        Certificates
+      <div
+        id="certificates"
+        className="pt-25 pb-6 flex items-center justify-center font-bold text-5xl text-gray-300"
+      >
+        My <AuroraText className="ml-3">Certificates</AuroraText>
       </div>
       <section className="flex justify-center items-center text-gray-200">
         <div className="relative p-[2px] rounded-xl overflow-hidden max-w-5xl w-full">
-          <div className="relative bg-[#0b0b0b]/70 rounded-xl grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-700 p-6 md:p-8">
+          <div className="relative bg-[#0b0b0b]/70 rounded-xl shadow-[0_0_30px_rgba(0,255,255,0.2)] backdrop-blur-lg border-white/10 border grid md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-700 p-6 md:p-8">
             <div className="px-6 py-4">
               <div className="flex items-center gap-2">
                 <h2 className="text-lg font-semibold text-[#FF8C69]">
