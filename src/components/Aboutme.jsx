@@ -4,10 +4,10 @@ import { AuroraText } from './ui/aurora-text';
 
 const Aboutme = () => {
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-6 py-12 ">
+    <section className="md:min-h-screen flex flex-col items-center justify-center px-6 py-12 ">
       <h1
         id="aboutme"
-        className=" pt-30 pb-12 flex items-center justify-center font-bold text-5xl text-gray-300"
+        className="md:pt-25 md:pb-6 flex items-center justify-center font-bold text-5xl text-gray-300"
       >
         About<AuroraText className="ml-2">Me</AuroraText>
       </h1>

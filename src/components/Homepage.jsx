@@ -22,7 +22,7 @@ const Homepage = () => {
     <div>
       <h1
         id="homepage"
-        className="pt-42 pb-20 flex items-center justify-center font-extrabold md:text-8xl text-5xl text-zinc-100"
+        className="md:pt-42 md:pb-20 pt-24 pb-8 flex items-center justify-center font-extrabold md:text-8xl text-5xl text-zinc-100"
       >
         Amonrat
         <br />

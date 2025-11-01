@@ -78,7 +78,7 @@ export default function Navbar() {
 
       {/* --- MOBILE NAV --- */}
       <nav
-        className={`fixed bottom-4 left-1/2 -translate-x-1/2 z-50 
+        className={`fixed top-4 left-1/2 -translate-x-1/2 z-50
         flex md:hidden items-center justify-around gap-1 w-[95vw] max-w-md px-2 py-2 rounded-full
         backdrop-blur-md border border-white/10 transition-all duration-500
         ${scrolled ? "bg-white/10 shadow-2xl" : "bg-white/5 shadow-md"}
