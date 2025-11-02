@@ -6,11 +6,11 @@ const Projects = () => {
     <section className="min-h-screen flex flex-col items-center justify-center px-6">
       <div
         id="projects"
-        className="pt-25 pb-12 flex items-center justify-center font-bold text-5xl text-gray-300"
+        className="md:pt-25 md:pb-12 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
       >
         Projects
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full items-center rounded-xl border border-gray-700 bg-[#0F0F0F] shadow-lg shadow-[#bc9fe2]/30 transition-shadow duration-300 p-6">
+      <div className="md:grid hidden grid-cols-1 md:grid-cols-2 gap-4 max-w-4xl w-full items-center rounded-xl border border-gray-700 bg-[#0F0F0F] shadow-lg shadow-[#bc9fe2]/30 transition-shadow duration-300 p-6">
         <img
           src="p3.jpg"
           alt="devenv"
@@ -34,7 +34,7 @@ const Projects = () => {
           </p>
         </div>
       </div>
-      <div className="pt-10 flex justify-center items-center text-gray-200">
+      <div className="md:pt-10 flex justify-center items-center text-gray-200">
         <div className="max-w-5xl w-full space-y-8 px-4">
           {/* Project Card */}
           {[

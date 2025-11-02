@@ -13,7 +13,7 @@ export const AnimatedShinyText = ({
       }}
       className={cn(
         "relative inline-block font-medium",
-        "bg-[linear-gradient(120deg,#777_0%_0%,#E0E0E0_45%,#777_55%)] bg-[length:var(--shiny-width)_100%]",
+        "bg-[linear-gradient(120deg,#777_0%_0%,#fffefe_45%,#777_55%)] bg-[length:var(--shiny-width)_100%]",
         "bg-clip-text text-transparent",
         className
       )}

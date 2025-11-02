@@ -14,7 +14,7 @@ const Home = () => {
     //           bg-gradient-to-b from-[#000004] via-[#242145] to-[#0f0f10]
     //           bg-repeat bg-contain bg-center"
     // >
-    <div className="min-h-screen w-full bg-[url('bg02.jpg')] bg-repeat bg-contain bg-center">
+    <div className="min-h-screen w-full bg-black bg-repeat bg-contain bg-center ">
       <Homepage />
       <AboutMe />
       <Skills />

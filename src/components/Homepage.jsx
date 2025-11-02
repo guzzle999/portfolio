@@ -28,7 +28,7 @@ const Homepage = () => {
         <br />
         Pratoomchai
       </h1>
-      <div className="flex items-center justify-center">
+      <div className="flex items-center justify-center flex-col gap-4">
         <button
           className="relative px-6 py-3 rounded-xl font-semibold cursor-pointer
   text-blue-100 bg-blue-500/10 border border-blue-400/20
@@ -39,11 +39,21 @@ const Homepage = () => {
         >
           View My Resume ✨
         </button>
+        <button
+          className="relative px-6 py-3 rounded-xl font-semibold cursor-pointer
+  text-blue-100 bg-blue-500/10 border border-blue-400/20
+  backdrop-blur-xl transition-all duration-300
+  hover:text-white hover:bg-blue-500/20
+  hover:shadow-[0_0_20px_rgba(59,130,246,0.5) ]
+  "
+        >
+          ✨ Download My Resume
+        </button>
       </div>
 
-      <div className="flex items-center justify-center py-12">
+      <div className="md:flex hidden items-center justify-center py-12">
         <ContactButtons onEmailCopy={handleEmailCopied} />
-        <p className="text-zinc-400 text-xl font-bold ">
+        <p className="text-white md:text-xl text-sm font-bold ">
           {isEmailCopied ? "Email copied!" : EMAIL_ADDRESS}
         </p>
       </div>

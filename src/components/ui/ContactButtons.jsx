@@ -41,7 +41,7 @@ export default function ContactButtons({onEmailCopy}) {
   };
 
   return (
-    <div className="flex items-center space-x-2">
+    <div className="md:flex items-center space-x-2 hidden">
       {/* ปุ่ม Liquid Glass: Let's Connect */}
       <div
         className="group relative flex items-center justify-center

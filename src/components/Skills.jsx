@@ -8,7 +8,7 @@ const Skills = () => {
     <>
       <div
         id="skills"
-        className="pt-25 pb-6 flex items-center justify-center font-bold text-5xl text-gray-300"
+        className="md:pt-25 md:pb-6 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
       >
         My <AuroraText className="ml-2">Skills</AuroraText>
       </div>
@@ -34,7 +34,7 @@ const Skills = () => {
                 </HyperText>
               </div>
               <p className="text-gray-400 leading-relaxed mb-6">
-                Node.js, Express, Python
+                Node.js (Express), Python
               </p>
               <div className="flex items-center gap-2 mb-3">
                 <Database className="text-[#CBA0FF] w-5 h-5" />

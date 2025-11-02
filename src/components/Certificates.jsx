@@ -17,7 +17,7 @@ const Certificates = () => {
     <>
       <div
         id="certificates"
-        className="pt-25 pb-6 flex items-center justify-center font-bold text-5xl text-gray-300"
+        className="md:pt-25 md:pb-6 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
       >
         My <AuroraText className="ml-3">Certificates</AuroraText>
       </div>
@@ -35,7 +35,7 @@ const Certificates = () => {
               </p>
               <InteractiveHoverButton
                 onClick={() => handleOpen("/certificate-JSD.png")}
-                className="text-blue-400 hover:text-blue-300 cursor-pointer "
+                className="text-white cursor-pointer "
               >
                 View Certificate
               </InteractiveHoverButton>
@@ -67,7 +67,7 @@ const Certificates = () => {
               </p>
               <InteractiveHoverButton
                 onClick={() => handleOpen("/certificate-AITheory-EN.png")}
-                className="text-blue-400 hover:text-blue-300 cursor-pointer "
+                className="text-white cursor-pointer"
               >
                 View Certificate
               </InteractiveHoverButton>

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { experiences } from "../data/experiences";
-import { Minus, Plus } from 'lucide-react';
+import { Minus, Plus, ChevronDown, ChevronUp } from "lucide-react";
 
 const AccordionItem= ({item, isOpen, onToggle}) => {
   const {year, role, details} = item;
@@ -8,14 +8,19 @@ const AccordionItem= ({item, isOpen, onToggle}) => {
   return (
     <div className="mb-4 p-4 w-full overflow-hidden rounded-2xl border border-white/20 bg-white/10 backdrop-blur-xl shadow-lg hover:shadow-blue-500/20 transition">
       <div
-        className="flex cursor-pointer items-center justify-between px-4 py-2 text-white"
+        className="md:flex cursor-pointer md:items-center md:justify-between px-4 py-2 text-white"
         onClick={onToggle}
       >
         <h3 className="text-lg text-blue-200 font-semibold ">{role}</h3>
-        <div className="flex items-center space-x-4">
+        <div className="md:flex md:items-center space-x-4 hidden">
           <span className="text-sm text-purple-100">{year}</span>
           {/* แสดงไอคอน + หรือ - ตามสถานะ isOpen */}
           {isOpen ? <Minus size={20} /> : <Plus size={20} />}
+        </div>
+        <div className="md:hidden flex md:items-center space-x-4">
+          <span className="text-sm text-purple-100">{year}</span>
+          {/* แสดงไอคอน + หรือ - ตามสถานะ isOpen */}
+          {isOpen ? <ChevronUp size={20} /> : <ChevronDown size={20} />}
         </div>
       </div>
       <div
@@ -55,7 +60,7 @@ const ExperienceAccordion = () => {
     <>
       <div
         id="experience"
-        className="pt-25 pb-6 flex items-center justify-center font-bold text-5xl text-gray-300"
+        className="md:pt-25 md:pb-6 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
       >
         Experience
       </div>
