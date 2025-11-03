@@ -8,7 +8,7 @@ const Skills = () => {
     <>
       <div
         id="skills"
-        className="md:pt-25 md:pb-6 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
+        className="md:pt-25 pt-20 md:pb-12 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
       >
         My <AuroraText className="ml-2">Skills</AuroraText>
       </div>

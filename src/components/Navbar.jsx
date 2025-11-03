@@ -9,6 +9,7 @@ import {
   FaBriefcase,
   FaEnvelope,
 } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const [active, setActive] = useState("home");
@@ -39,13 +40,33 @@ export default function Navbar() {
   }, []);
 
   const links = [
-    { name: "Home", href: "#homepage", icon: <FaHome /> },
-    { name: "About", href: "#aboutme", icon: <FaUser /> },
-    { name: "Skills", href: "#skills", icon: <FaCode /> },
-    { name: "Certificates", href: "#certificates", icon: <FaCertificate /> },
-    { name: "Projects", href: "#projects", icon: <FaFolderOpen /> },
-    { name: "Experience", href: "#experience", icon: <FaBriefcase /> },
-    { name: "Contact", href: "#contact", icon: <FaEnvelope /> },
+    { name: "Home", href: "#homepage", icon: <FaHome />, type: "section" },
+    { name: "About", href: "/aboutme", icon: <FaUser />, type: "route" },
+    { name: "Skills", href: "#skills", icon: <FaCode />, type: "section" },
+    {
+      name: "Projects",
+      href: "#projects",
+      icon: <FaFolderOpen />,
+      type: "section",
+    },
+    {
+      name: "Experience",
+      href: "#experience",
+      icon: <FaBriefcase />,
+      type: "section",
+    },
+    {
+      name: "Certificates",
+      href: "#certificates",
+      icon: <FaCertificate />,
+      type: "section",
+    },
+    {
+      name: "Contact",
+      href: "#contact",
+      icon: <FaEnvelope />,
+      type: "section",
+    },
   ];
 
   return (
@@ -59,21 +80,36 @@ export default function Navbar() {
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-6"}
       `}
       >
-        {links.map((link) => (
-          <a
-            key={link.name}
-            href={link.href}
-            onClick={() => setActive(link.href.replace("#", ""))}
-            className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+        {links.map((link) =>
+          link.type === "route" ? (
+            <Link
+              key={link.name}
+              to={link.href}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+        ${
+          active === link.href.replace("/", "")
+            ? "bg-white/20 text-white shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+            : "text-gray-200 hover:bg-white/10 hover:shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+        }`}
+            >
+              {link.name}
+            </Link>
+          ) : (
+            <a
+              key={link.name}
+              href={link.href}
+              onClick={() => setActive(link.href.replace("#", ""))}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
             ${
               active === link.href.replace("#", "")
                 ? "bg-white/20 text-white shadow-[0_0_10px_rgba(255,255,255,0.6)]"
                 : "text-gray-200 hover:bg-white/10 hover:shadow-[0_0_8px_rgba(255,255,255,0.4)]"
             }`}
-          >
-            {link.name}
-          </a>
-        ))}
+            >
+              {link.name}
+            </a>
+          )
+        )}
       </nav>
 
       {/* --- MOBILE NAV --- */}
@@ -85,22 +121,37 @@ export default function Navbar() {
         ${visible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
       `}
       >
-        {links.map((link) => (
-          <a
-            key={`mobile-${link.name}`}
-            href={link.href}
-            onClick={() => setActive(link.href.replace("#", ""))}
-            aria-label={link.name}
-            className={`flex items-center justify-center w-12 h-12 rounded-full text-xl transition-all duration-300
+        {links.map((link) =>
+          link.type === "route" ? (
+            <Link
+              key={link.name}
+              to={link.href}
+              className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-300
+        ${
+          active === link.href.replace("/", "")
+            ? "bg-white/20 text-white shadow-[0_0_10px_rgba(255,255,255,0.6)]"
+            : "text-gray-200 hover:bg-white/10 hover:shadow-[0_0_8px_rgba(255,255,255,0.4)]"
+        }`}
+            >
+              {link.icon}
+            </Link>
+          ) : (
+            <a
+              key={`mobile-${link.name}`}
+              href={link.href}
+              onClick={() => setActive(link.href.replace("#", ""))}
+              aria-label={link.name}
+              className={`flex items-center justify-center w-12 h-12 rounded-full text-xl transition-all duration-300
             ${
               active === link.href.replace("#", "")
                 ? "bg-white/20 text-white shadow-[0_0_10px_rgba(255,255,255,0.6)]"
                 : "text-gray-200 hover:bg-white/10"
             }`}
-          >
-            {link.icon}
-          </a>
-        ))}
+            >
+              {link.icon}
+            </a>
+          )
+        )}
       </nav>
     </>
   );
