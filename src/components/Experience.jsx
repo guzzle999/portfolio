@@ -60,7 +60,7 @@ const ExperienceAccordion = () => {
     <>
       <div
         id="experience"
-        className="md:pt-25 md:pb-6 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
+        className="md:pt-25 md:pb-6 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-white"
       >
         Experience
       </div>

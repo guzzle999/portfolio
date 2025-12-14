@@ -39,15 +39,17 @@ const Homepage = () => {
     <div>
       <h1
         id="homepage"
-        className="md:pt-42 pt-20 mb-4 flex-row md:flex item-center justify-center mx-10 font-extrabold md:text-3xl text-xl text-zinc-100"
+        className="md:pt-50 pt-20 mb-10 flex-row md:flex item-center justify-center mx-10 font-extrabold md:text-5xl text-xl text-zinc-100 "
       >
         Hello, I’m
         <span>
           <AuroraText className="ml-2 mr-2"> Amonrat Pratoomchai</AuroraText>
         </span>
-        a Junior Full Stack Developer
       </h1>
-      <h2 className="pb-8 mx-10 flex item-center justify-center font-bold md:text-2xl text-lg text-zinc-100">
+      <h2 className="font-extrabold flex items-center justify-center md:text-4xl text-xl text-zinc-100 mb-10">
+        a Junior Full Stack Developer
+      </h2>
+      <h2 className="pb-12 mx-10 flex item-center justify-center font-bold md:text-2xl text-lg text-zinc-100 ">
         Building smart, scalable, and user-focused web solutions
       </h2>
 
@@ -69,7 +71,8 @@ const Homepage = () => {
   backdrop-blur-xl transition-all duration-300
   hover:text-white hover:bg-blue-500/20
   hover:shadow-[0_0_20px_rgba(59,130,246,0.5) ]
-  " onClick={handleDownload}
+  "
+          onClick={handleDownload}
         >
           ✨ Download My Resume
           <BorderBeam duration={8} size={70} />

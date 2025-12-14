@@ -8,7 +8,7 @@ const Skills = () => {
     <>
       <div
         id="skills"
-        className="md:pt-25 pt-20 md:pb-12 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
+        className="md:pt-25 pt-20 md:pb-12 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-white"
       >
         My <AuroraText className="ml-2">Skills</AuroraText>
       </div>
@@ -22,7 +22,7 @@ const Skills = () => {
                   Frontend
                 </HyperText>
               </div>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 HTML5, CSS, Tailwind CSS, JavaScript, React
               </p>
             </div>
@@ -33,7 +33,7 @@ const Skills = () => {
                   Backend
                 </HyperText>
               </div>
-              <p className="text-gray-400 leading-relaxed mb-6">
+              <p className="text-white leading-relaxed mb-6">
                 Node.js (Express), Python
               </p>
               <div className="flex items-center gap-2 mb-3">
@@ -42,7 +42,7 @@ const Skills = () => {
                   Databases
                 </HyperText>
               </div>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 MongoDB, PostgreSQL
               </p>
             </div>
@@ -53,7 +53,7 @@ const Skills = () => {
                   Tools & Others
                 </HyperText>
               </div>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Git, Vite, VS Code, Docker, n8n, Trello, Figma
               </p>
             </div>
@@ -64,7 +64,7 @@ const Skills = () => {
                   Soft Skills
                 </HyperText>
               </div>
-              <p className="text-gray-400 leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Active listening, Empathy, Customer focus, Adaptability, Growth
                 mindset, Teamwork, Proactiveness
               </p>

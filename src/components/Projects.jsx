@@ -6,7 +6,7 @@ const Projects = () => {
     <section className="min-h-screen flex flex-col items-center justify-center px-6">
       <div
         id="projects"
-        className="md:pt-25 md:pb-12 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-gray-300"
+        className="md:pt-25 md:pb-12 py-5 flex items-center justify-center font-bold md:text-5xl text-4xl text-white"
       >
         Projects
       </div>
@@ -18,7 +18,7 @@ const Projects = () => {
               object-cover rounded-xl shadow-lg transition-transform duration-300 hover:scale-105"
         ></img>
         <div className="text-white space-y-4 max-w-md mx-auto">
-          <p className="text-zinc-300 text-lg leading-relaxed">
+          <p className="text-zinc-100 text-lg leading-relaxed">
             My journey into software development began with a strong curiosity
             about Artificial Intelligence. This led me to join the SUPER AI
             ENGINEER Season 5 program, where I received hands-on training in AI
@@ -26,7 +26,7 @@ const Projects = () => {
             program, I developed an AI Chatbot project aimed at supporting local
             entrepreneurs and communities.
           </p>
-          <p className="text-zinc-300 text-lg leading-relaxed">
+          <p className="text-zinc-100 text-lg leading-relaxed">
             Later, I joined the Junior Software Developer Bootcamp by Generation
             Thailand, where I built several projects, including a Notes App, a
             personal finance tracking web application (Coin Kept), and a group
@@ -34,10 +34,19 @@ const Projects = () => {
           </p>
         </div>
       </div>
-      <div className="md:pt-10 flex justify-center items-center text-gray-200">
+      <div className="md:pt-10 flex justify-center items-center text-gray-100">
         <div className="max-w-5xl w-full space-y-8 px-4">
           {/* Project Card */}
           {[
+            {
+              title: "Notory 📝",
+              description:
+                "A full-stack notes app that supports smart search and AI-driven question answering from user notes.",
+              image: "/notory.png",
+              link: "https://notory.vercel.app/",
+              color: "#a55fe7dd",
+              hoverShadow: "hover:shadow-[#a55fe7dd]/30",
+            },
             {
               title: "Coin Kept 🪙",
               description:
@@ -47,15 +56,6 @@ const Projects = () => {
               color: "#2bff00",
               hoverShadow: "hover:shadow-[#2bff00]/30",
             },
-            // {
-            //   title: "Notes App - Educational Project",
-            //   description:
-            //     "A full-stack notes app that supports smart search and AI-driven question answering from user notes.",
-            //   image: "/",
-            //   link: "https://frontend-rag-notes.vercel.app/",
-            //   color: "#2bff00",
-            //   hoverShadow: "hover:shadow-[#2bff00]/30",
-            // },
             {
               title: "Obsidian Sip ☕",
               description:

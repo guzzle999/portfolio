@@ -15,15 +15,21 @@ const Home = () => {
     //           bg-repeat bg-contain bg-center"
     // >
     <>
-      <div className="min-h-screen w-full bg-black bg-repeat bg-contain bg-center ">
-        <Meteors number={30} />
-        <Homepage />
-        <Skills />
-        <Projects />
-        <Experience />
-        <Certificates />
-        <Contact />
-      </div>
+      <section className="min-h-screen w-full bg-[url('bg04.jpg')] bg-no-repeat bg-cover bg-center relative overflow-hidden ">
+        <Meteors number={20} />
+        <div div className="relative z-10 h-full">
+          <Homepage />
+        </div>
+      </section>
+      <section className="min-h-screen w-full bg-[url('bg04.jpg')] bg-contain bg-center  bg-black/50 bg-blend-overlay">
+        <div className="container mx-auto">
+          <Skills />
+          <Projects />
+          <Experience />
+          <Certificates />
+          <Contact />
+        </div>
+      </section>
     </>
   );
 };
