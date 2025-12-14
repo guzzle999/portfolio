@@ -15,13 +15,13 @@ const Home = () => {
     //           bg-repeat bg-contain bg-center"
     // >
     <>
-      <section className="min-h-screen w-full bg-[url('bg04.jpg')] bg-no-repeat bg-cover bg-center relative overflow-hidden ">
+      <section className="min-h-screen w-full bg-[url('/bg04.jpg')] bg-no-repeat bg-cover bg-center relative overflow-hidden ">
         <Meteors number={20} />
         <div div className="relative z-10 h-full">
           <Homepage />
         </div>
       </section>
-      <section className="min-h-screen w-full bg-[url('bg04.jpg')] bg-contain bg-center  bg-black/50 bg-blend-overlay">
+      <section className="min-h-screen w-full bg-[url('/bg04.jpg')] bg-contain bg-center  bg-black/50 bg-blend-overlay">
         <div className="container mx-auto">
           <Skills />
           <Projects />
